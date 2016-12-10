@@ -16,7 +16,7 @@ export class HomePage extends Global {
    super(http);
    this.meterValue = 0;
    platform.ready().then(() => {
-      Shake.startWatch(60).subscribe(() => {
+      /*Shake.startWatch(60).subscribe(() => {
         this.showPrompt();
       });
       DBMeter.start().subscribe(data => {
@@ -29,7 +29,7 @@ export class HomePage extends Global {
             },1500);
           })
         }
-      });
+      });*/
     });
   }
 

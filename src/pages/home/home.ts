@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import {Http} from '@angular/http';
 import {NavController, AlertController, Platform} from 'ionic-angular';
 import {Global} from '../Global/gbal';
+import {Day} from '../day/day';
 import {Shake, CallNumber, DBMeter} from 'ionic-native';
 @Component({
   selector: 'page-home',
@@ -25,11 +26,17 @@ export class HomePage extends Global {
           DBMeter.stop().then(()=>{
             this.showCallAlert();
             setTimeout(()=>{
-              CallNumber.callNumber('3308589293', true).then(()=>{ });
+              CallNumber.callNumber('9377653096', true).then(()=>{ });
             },1500);
           })
         }
       });*/
+    });
+  }
+
+  goToDay(){
+    this.navCtrl.push(Day, {
+      data: 'DSYKSE DIS DAT DOE'
     });
   }
 
